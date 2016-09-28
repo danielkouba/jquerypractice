@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var target = "red";
+			$('div').hover(function(){
+				$(this).attr("class", "red");	
+			},function(){
+				$(this).attr("class", "blue");	
+			})
+
+			// $('div').mouseenter(function(){
+			// 	$(this).attr("class", "red");	
+			// })
+			// $('div').mouseleave(function(){
+			// 	$(this).attr("class", "blue");	
+			// })
+
+			// $('div').hover(function(){
+			// 	$(this).attr("class", target);
+			// 	if (target == "red"){
+			// 		target = "blue";
+			// 	} else {
+			// 		target = "red";
+			// 	};
+			// })
+		})
+
+	</script>
+	<style>
+		div{
+			width: 200px;
+			height: 200px;
+		}
+		.red{
+			background-color: red;
+		}
+		.blue{
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="blue"></div>
+</body>
+</html>
